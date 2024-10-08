@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Piyapong Nattawuth">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel='stylesheet' type="text/css" media="screen" href="style.css"> 
+    <title>Portfolio</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <span>Portfolio</span>
+            </div>
+            <div class="links">
+                <div class="link"><a href="index.html">Home</a></div>
+                <div class="link"><a href="project.html">Project</a></div>
+                <div class="link"><a href="assignment.html">Assignment</a></div>
+            </div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        <div class="dropdown">
+            <a href="index.html">Home</a>
+            <hr>
+            <a href="project.html">Project</a>
+            <hr>
+            <a href="assignment.html">Assignment</a>
+            <i class="fa-solid fa-xmark cancle" onclick="cancle()"></i>
+        </div>
+    </nav>
+    <section>
+        <div class="main-container">
+
+            <!-- รูป -->
+            <div class="image">
+                <img src="pic/me.jpg" alt="">
+            </div>
+            <div class="content">
+                <p>Hi, there.</p>
+
+                <!-- ชื่อ-นามสกุล -->
+                <h1><span>Piyapong Nattawuth</span>'s here</h1>
+                
+                <!-- ทักษะ/ความสามารถ -->
+                <h2 class="typing-text">I'm<span></span></h2>
+                
+                <!-- งานอดิเรก -->
+                <p>Study animation production is my hobby </p>
+                
+                <!-- ความสนใจ -->
+                <p>Also interested in doing live 2D</p>
+                
+                <!-- คติประจำใจ -->
+                <h2><span>"Not deny the possibility"</span></h2>
+                <br>
+
+                <!-- Social-Links -->
+                <div class="social-links">
+                    <a href="https://github.com/Setsune7O43" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100007491499188&mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/mr_piero_miyuuki/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>    
+
+        <!-- Reference -->
+        <div class="source">
+            <p class="link" >Reference: <a href="https://www.youtube.com/watch?v=DYcWI46cd9k&ab_channel=ProCoder" target="_blank">template</a></p>
+        </div>
+    </section>
+    <script>
+        function hamburg(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(0px)"
+        }
+        function cancle(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(-1000px)"
+        }
+    </script>
+</body>
+</html>

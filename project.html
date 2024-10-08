@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Piyapong Nattawuth">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel='stylesheet' type="text/css" media="screen" href="style.css"> 
+    <title>Portfolio</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <span>Project</span>
+            </div>
+            <div class="links">
+                <div class="link"><a href="index.html">Home</a></div>
+                <div class="link"><a href="project.html">Project</a></div>
+                <div class="link"><a href="assignment.html">Assignment</a></div>
+            </div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        <div class="dropdown">
+            <a href="index.html">Home</a>
+            <hr>
+            <a href="project.html">Project</a>
+            <hr>
+            <a href="assignment.html">Assignment</a>
+            <i class="fa-solid fa-xmark cancle" onclick="cancle()"></i>
+        </div>
+    </nav>
+    <div class="section">
+        <div class="head-container">
+            <h1>2D Art</h1>
+        </div>
+        <div class="project-img">
+            <div class="img"><img src="pic/pepsi.jpg" alt=""></div>
+            <div class="img"><img src="pic/Don't waste.png" alt=""></div>
+            <div class="img"><img src="pic/FA_Yume2.jpg" alt=""></div>
+            <div class="img"><img src="pic/DS.png" alt=""></div>
+        </div>
+        <div class="head-container">
+            <h1>3D Model</h1>
+        </div>
+        <div class="project-img">
+            <div class="img"><img src="pic/Butterfly.png" alt=""></div>
+            <div class="img"><img src="pic/Kurona.png" alt=""></div>
+            <div class="img"><img src="pic/LightPole.png" alt=""></div>
+            <div class="img"><img src="pic/BlacksmithHouse.png" alt=""></div>
+        </div>
+        <div class="head-container">
+            <h1>Animation</h1>
+        </div>
+        <div class="project-vdo">
+            <div class="vdo">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6EFOuL14vsI?si=leYSBHqrwvy3cXNT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <script>
+        function hamburg(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(0px)"
+        }
+        function cancle(){
+            const navbar = document.querySelector(".dropdown")
+            navbar.style.transform = "translateY(-1000px)"
+        }
+    </script>
+</body>
+</html>

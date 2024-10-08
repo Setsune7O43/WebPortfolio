@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+*{
+    font-family: "Sarabun", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url("pic/Pikuniku_Dance_Ellen_Joe.gif");
+    background-size: 10%;
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    position: sticky;
+}
+
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 0, 98);
+}
+
+.nav-container .logo {
+    color: white;
+    margin-left: 11%;
+}
+
+.nav-container .logo span{
+    font-size: 50px;
+    font-family: Garamond, "Times New Roman", serif; 
+    font-style: italic;
+    font-weight: bold;
+}
+
+.hamburg,
+.cancle{
+    cursor: pointer;
+    position: absolute;
+    right: 11%;
+    top:30px;
+    color: white;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+    display: none;
+}
+
+.nav-container .links{
+    display: flex;
+    margin-right: 10%;
+    margin-top: 15px;
+}
+
+.nav-container .links a{
+    font-size: 30px;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+    font-family: Garamond, "Times New Roman", serif; 
+    font-style: italic;
+    font-weight: bold;
+}
+
+.nav-container .links a:hover{
+    color: rgb(255, 190, 0);
+    border-bottom: 2px solid rgb(255, 190, 0);
+}
+
+.dropdown{
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    transform:  translateY(-1000px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(5px) brightness(60%);
+    box-shadow: 0 0 20px black;
+    transition: 0.5s linear;
+    
+}
+
+.dropdown a{
+    font-size: 30px;
+    display: flex;
+    color: white;
+    text-decoration: none;
+    padding: 5%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s linear;
+    font-family: Garamond, "Times New Roman", serif; 
+    font-style: italic;
+    font-weight: bold;
+}
+
+.dropdown a:hover{
+    background-color: rgb(255, 0, 98);
+}
+
+section{
+    width: 80%;
+    height: 90%;
+    background-color: rgb(255, 243, 225);
+    margin-left: 10%;
+}
+
+.section{
+    height: max-content;
+    background-color: rgb(255, 243, 225);
+    width: 80%;
+    margin-left: 10%;
+    padding-bottom: 10%;
+}
+
+.main-container{
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;   
+}
+
+.main-container .image{
+    width: 300px;
+    height: 400px;
+}
+
+.main-container .image img{
+    width: 100%;
+    border-radius: 35pt;
+    border: 2px solid rgb(255, 186, 183);
+}
+
+.main-container .image img:hover{
+    animation: animate 1.5s ease-in-out infinite;
+}
+
+@keyframes animate{
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.05;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+.main-container .content{
+    color: black;
+    width: 40%;
+}
+
+.main-container .content h1{
+    font-size: 27.5px;
+}
+
+.content h1 span{
+    font-weight: 700;
+    color: rgb(255, 0, 98);
+}
+
+.content h2{
+    font-weight: 600;
+}
+
+.content h2 span{
+    font-weight: 600;
+    color: rgb(255, 0, 98);
+}
+
+.content p{
+    font-size: 17.5px;
+    margin: 10px 0;
+}
+
+.typing-text{
+    font-size: 37.5px;
+    font-weight: 700;
+    position: relative;
+}
+
+.typing-text span:before{
+    content: "";
+    color: rgb(255, 0, 98);
+    animation: words 20s infinite;
+    font-weight: 700;
+}
+
+.typing-text span:after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 50px;
+    border-left: 3px solid rgb(255, 0, 98);
+    right: -8;
+    animation: cursor 1s infinite
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid rgb(255, 243, 225);
+    }
+}
+
+@keyframes words {
+    0%,20%{
+        content: " 2D Artist";
+    }
+    21%,40%{
+        content: " 3D Modeller";
+    }
+    41%,60%{
+        content: " 2D & 3D Animator";
+    }
+    61%,80%{
+        content: " Game Developer";
+    }
+    81%,100%{
+        content: " Gamer";
+    }
+}
+
+.social-links i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid rgb(255, 0, 98);
+    border-radius: 50%;
+    color: rgb(255, 0, 98);;
+    margin: 5px 15px 5px 0;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+}
+
+.social-links i:hover{
+    scale: 1.3;
+    filter: drop-shadow(0 0 5px rgb(255, 0, 98));
+    background-color: rgb(255, 0, 98);;
+    color: white;
+}
+
+.head-container > h1{
+    text-align: center;
+    padding: 60px;
+    font-weight: 600;
+    font-size: 30px;
+    text-decoration: underline wavy 1px rgb(211, 0, 81);
+    color: rgb(255, 0, 98);
+}
+
+.project-img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+.project-img .img{
+    width: 30%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.project-img img{
+    width: 100%;
+    border-radius: 20pt;
+    border: 3px solid rgb(255, 186, 183);
+}
+
+.project-img .img img:hover{
+    animation: animate-img 1s forwards;
+}
+
+@keyframes animate-img{
+    0%{
+        scale: 1;
+    }
+    100%{
+        scale: 1.25;
+    }
+}
+
+.project-vdo{
+    display: flex;
+    justify-content: center;
+}
+
+.project-vdo .vdo{
+    width: 60%;
+}
+
+.project-vdo iframe{
+    max-width: 100%;
+    max-height: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 15pt;
+    border: 3px solid rgb(255, 186, 183);
+}
+
+.btn{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn a{
+    width: 40%;
+    height: 6vh;
+    margin-bottom: 30px;
+}
+
+.btn button{
+    width: 100%;
+    height: 6vh;
+    background-color: rgb(255, 0, 98);
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 120%;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+
+.btn button:hover{
+    scale: 1.02;
+    color: rgb(255, 0, 98);
+    border: 2px solid rgb(255, 0, 98);
+    background-color: transparent;
+    box-shadow: 0 0 10px 5px rgb(255, 0, 98);
+}
+
+.source{
+    background-color: rgb(255, 243, 225);
+    text-align: center;
+}
+
+.source a:link{
+    text-decoration: none;
+	color: #0000ff;
+} 
+.source a:visited{
+    text-decoration: none;
+	color: rgb(255, 0, 98);
+} 
+.source a:hover{ 
+    text-decoration: underline;
+	color: rgb(155, 0, 255);
+} 
+
+@media (max-width:884px) {
+    
+    body{
+        width: 100%;
+        height: 100%;
+        background-image: none;
+        background-color: rgb(255, 243, 225);;
+        background-size: 100%;
+    }
+
+    section{
+        width: 100%;
+        margin-left: 0%;
+    } 
+
+    .section{
+        height: fit-content;
+        background-color: rgb(255, 243, 225);
+        width: 100%;
+        margin-left: 0%;
+        padding-bottom: 10%;
+    }
+
+    nav .logo{
+        position: absolute;
+        font-size: 1.5rem;
+    }
+
+    .main-container{
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .main-container .image{
+        height: 250px;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .main-container .image img{
+        width: 60%;
+    }
+
+    .main-container .content{
+        padding-top: 10px;
+    }
+
+    .project-img .img{
+        width: 40%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    
+    .project-img img{
+        width: 100%;
+        border-radius: 20pt;
+        border: 3px solid rgb(255, 186, 183);
+    }
+
+    .project-vdo .vdo{
+        width: 70%;
+    }
+    
+    .project-vdo iframe{
+        max-width: 100%;
+        max-height: 100%;
+        aspect-ratio: 16 / 10;
+        border-radius: 15pt;
+        border: 3px solid rgb(255, 186, 183);
+    }
+
+    .btn{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .btn a{
+        width: 80%;
+        height: 6vh;
+        margin-bottom: 20px;
+    }
+
+    .source{
+        width: 100%;
+        margin-left: 0;
+        padding-top: 100px;
+    }
+
+    .nav-container .links{
+        display: none;
+    }
+
+    .hamburg,
+    .cancle{
+        display: block;
+    }
+
+    .main-container .content{
+        width: 80%;
+    }
+
+    .social-links i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .typing-text{
+        font-size: 2rem;
+    }
+}
+
+
+@media (max-width:440px) {
+
+    .main-container .image{
+        width: 45%;
+        height: 37.5%;
+        padding-top: 5%;
+    }
+
+    .main-container .image img{
+        width: 100%;
+    }
+
+    .main-container button{
+        margin-top: 15px;
+    }
+
+    .project-img {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .project-img .img {
+        width: 50%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+}
+

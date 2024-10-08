@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+*{
+    margin-left: 15pt;
+    margin-right: 15pt;
+    margin-bottom: 15pt;
+}
+
+body{
+    background-color: rgb(255, 243, 225);
+    font-family: "Sarabun", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1{
+    background-color:#ffcb9b;
+    color: #ce6300;
+    font-family: Garamond, "Times New Roman", serif; 
+    font-size: 30pt;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 40pt;
+    text-align: center;
+}
+
+h2{
+    font-size: 17pt;
+    color: #9c4c00;
+    text-decoration: underline;
+}
+
+li{
+    font-weight:550;
+}
+
+.text{
+    margin-left: 35pt;
+}
+
+.number{
+    font-weight:600;
+    margin-left: 30pt;
+    margin-right: 1pt;
+}
+
+.middle_page{
+    text-align: center;
+}
+
+.promote_pic{
+    width: 200pt;
+    border-radius: 30pt;
+}
+
+.ingredients_pic{
+    width: 150pt;
+    border-radius: 30pt;
+}
+
+.step_pic{
+    width: 180pt;
+}
+
+.show_done{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.scale{
+    width: 100pt;
+    border-radius: 30pt;
+}
+
+a:link{
+	color: #0000FF; 
+}
+a:visited{
+	color: #6f00ff; 
+} 
+a:hover{ 
+	color: #ff0000; 
+} 
